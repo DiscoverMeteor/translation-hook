@@ -1,6 +1,6 @@
 #!/bin/bash -
 
-REPO='https://github.com/discovermeteor/discovermeteorstatic.git';
+REPO='https://$GITHUB_USER:$GITHUB_PASS@github.com/discovermeteor/discovermeteorstatic.git';
 
 git clone $REPO src
 cd src
