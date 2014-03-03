@@ -5,6 +5,7 @@ REPO="https://"$GITHUB_USERNAME":"$GITHUB_PASSWORD"@github.com/discovermeteor/di
 echo $GITHUB_USERNAME
 echo $GITHUB_PASSWORD
 echo $REPO
+echo $COMMIT
 
 git clone $REPO src
 cd src
@@ -15,5 +16,5 @@ cd source/chapters/$LANG
 git checkout $COMMIT
 cd ../../..
 git add source/chapters/$LANG
-git commit -m "updated $LANG submodule via hook"
+git commit -m "updated $LANG submodule to $COMMIT via hook"
 git push origin master
