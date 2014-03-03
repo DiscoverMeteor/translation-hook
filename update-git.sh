@@ -1,6 +1,6 @@
 #!/bin/bash -
 
-REPO='https://$GITHUB_USERNAME:$GITHUB_PASSWORD@github.com/discovermeteor/discovermeteorstatic.git';
+REPO="https://$GITHUB_USERNAME:$GITHUB_PASSWORD@github.com/discovermeteor/discovermeteorstatic.git";
 
 echo $REPO
 
@@ -14,4 +14,4 @@ git checkout $COMMIT
 cd ../../..
 git add source/chapters/$LANG
 git commit -m "updated $LANG submodule via hook"
-git push
+git push origin master
