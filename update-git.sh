@@ -1,7 +1,9 @@
 #!/bin/bash -
 
-REPO="https://$GITHUB_USERNAME:$GITHUB_PASSWORD@github.com/discovermeteor/discovermeteorstatic.git";
+REPO="https://"$GITHUB_USERNAME":"$GITHUB_PASSWORD"@github.com/discovermeteor/discovermeteorstatic.git";
 
+echo $GITHUB_USERNAME
+echo $GITHUB_PASSWORD
 echo $REPO
 
 git clone $REPO src
