@@ -5,7 +5,7 @@ require "json"
 
 
 def update_with_commit_for_lang(commit, language)
-  system 'LANG=#{language} COMMIT=#{commit} ./update-git.sh'
+  system "LANG=#{language} COMMIT=#{commit} ./update-git.sh"
 end
 
 def deal_with_payload(payload)
