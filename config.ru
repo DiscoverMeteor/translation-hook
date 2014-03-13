@@ -21,7 +21,10 @@ end
 
 run lambda { |env|
   req = Rack::Request.new(env)
-  deal_with_payload(JSON.parse(req['payload']))
+  
+  # this is not set if we get simple "ping" request
+  if (req['payload'])
+    deal_with_payload(JSON.parse(req['payload']))
 
   [
     200,
