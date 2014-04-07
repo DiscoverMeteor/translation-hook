@@ -25,6 +25,7 @@ run lambda { |env|
   # this is not set if we get simple "ping" request
   if (req['payload'])
     deal_with_payload(JSON.parse(req['payload']))
+  end
 
   [
     200,
